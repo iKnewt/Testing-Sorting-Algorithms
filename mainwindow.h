@@ -15,8 +15,14 @@ public:
 	explicit MainWindow(QWidget *parent = nullptr);
 	~MainWindow();
 
+public slots:
+	void test();
+
+signals:
+
 private:
 	Ui::MainWindow *ui;
+
 };
 
 #endif // MAINWINDOW_H

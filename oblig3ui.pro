@@ -26,10 +26,13 @@ CONFIG += c++11
 
 SOURCES += \
         main.cpp \
-        mainwindow.cpp
+        mainwindow.cpp \
+    randomvectorset.cpp
 
 HEADERS += \
-        mainwindow.h
+        mainwindow.h \
+    randomvectorset.h \
+    sort.h
 
 FORMS += \
         mainwindow.ui
