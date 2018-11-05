@@ -37,6 +37,23 @@ public:
 		return tempVector;
 	}
 
+
+	void printAll() {
+		for (auto i = 0; i < m_vectorSet.size(); i++) {
+			print(m_vectorSet[i]);
+			std::cout << "\n\n";
+		}
+	}
+
+	void print(std::vector<T> vectorToPrint) {
+		std::cout << "\n";
+		for(unsigned int i = 0; i < vectorToPrint.size(); i++) {
+			std::cout << vectorToPrint[i] << "-";
+		}
+	}
+
+
+
 };
 
 #endif // RANDOMVECTOR_H
