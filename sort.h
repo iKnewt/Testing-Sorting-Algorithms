@@ -6,6 +6,7 @@
 #include <algorithm>
 #include <chrono>
 #include "randomvectorset.h"
+#include "binarysearchtree.h"
 
 enum sortFunctions {
 	MERGE_SORT,
@@ -80,31 +81,33 @@ namespace Sort {
 	void selectionSort(std::vector<T> vectorToSort) {
 
 		int n = vectorToSort.size();
-		int i, j, min_idx;
+		int i, j, minIndex;
 
 		// One by one move boundary of unsorted subarray
-		for (i = 0; i < n-1; i++)
-		{
+		for(i = 0; i < n-1; i++) {
 			// Find the minimum element in unsorted array
-			min_idx = i;
-			for (j = i+1; j < n; j++)
-				if (vectorToSort[j] < vectorToSort[min_idx])
-					min_idx = j;
+			minIndex = i;
+			for(j = i+1; j < n; j++)
+				if(vectorToSort[j] < vectorToSort[minIndex])
+					minIndex = j;
 
 			// Swap the found minimum element with the first element
-			swap<T>(&vectorToSort[min_idx], &vectorToSort[i]);
-
+			swap<T>(&vectorToSort[minIndex], &vectorToSort[i]);
 		}
-
-
-
 	}
 
 	template<class T>
 	void quickSort(std::vector<T> vectorToSort);
 
 	template<class T>
-	void binarySearchTreeSort(std::vector<T> vectorToSort);
+	void binarySearchTreeSort(std::vector<T> vectorToSort) {
+
+		BinarySearchTree<T>* binarySearchTree = new BinarySearchTree<T>;
+
+		for(unsigned int i = 0; i < vectorToSort.size(); i++) {
+			binarySearchTree->insert(vectorToSort[i]);
+		}
+	}
 
 	template<class T>
 	void heapSort(std::vector<T> vectorToSort) {
@@ -127,10 +130,10 @@ namespace Sort {
 				case MERGE_SORT :
 					mergeSort<T>(vectors->m_vectorSet[j]);
 					break;
-//				case INSERTION_SORT : insertionSort<T>(vectors->m_vectorSet[j]);
+					//				case INSERTION_SORT : insertionSort<T>(vectors->m_vectorSet[j]);
 				case SELECTION_SORT : selectionSort<T>(vectors->m_vectorSet[j]);
-//				case QUICK_SORT : quickSort<T>(vectors->m_vectorSet[j]);
-//				case BINARY_SEARCH_TREE_SORT : binarySearchTreeSort<T>(vectors->m_vectorSet[j]);
+					//				case QUICK_SORT : quickSort<T>(vectors->m_vectorSet[j]);
+				case BINARY_SEARCH_TREE_SORT : binarySearchTreeSort<T>(vectors->m_vectorSet[j]);
 				case HEAP_SORT : heapSort<T>(vectors->m_vectorSet[j]);
 				case STD_SORT :
 					stdSort<T>(vectors->m_vectorSet[j]);
