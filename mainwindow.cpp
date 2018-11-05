@@ -70,6 +70,25 @@ void MainWindow::test()
 
 
 
+
+	if(ui->checkBox_selectionSort->isChecked()) {
+		ui->label_progression_selectionSort->setText("Sorting...");
+		ui->label_progression_selectionSort->repaint();
+		qDebug() << "heapSort checked";
+		ui->label_secondsToComplete_selectionSort->setText(QString::number(Sort::testTime<int>(vectorSize, vectorAmount, SELECTION_SORT)));
+		ui->label_progression_selectionSort->setText("Finished.");
+	}
+	else {
+		ui->label_progression_mergeSort->setText("");
+		ui->label_secondsToComplete_mergeSort->setText("");
+	}
+
+
+
+
+
+
+
 	if(ui->checkBox_heapSort->isChecked()) {
 		ui->label_progression_heapSort->setText("Sorting...");
 		ui->label_progression_heapSort->repaint();

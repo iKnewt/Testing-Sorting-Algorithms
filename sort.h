@@ -25,52 +25,80 @@ namespace Sort {
 	template<class T>
 	void mergeSort(std::vector<T> vectorToSort) {
 
-	int i, j, k, lower1, lower2, size, upper1, upper2;
+		int i, j, k, lower1, lower2, size, upper1, upper2;
 
-	int n = vectorToSort.size();
+		int n = vectorToSort.size();
 
-	std::vector<T> help;
+		std::vector<T> help;
 
-	for(unsigned int x = 0; x < vectorToSort.size(); x++) {
-		help.push_back(0);
-	}
+		for(unsigned int x = 0; x < vectorToSort.size(); x++) {
+			help.push_back(0);
+		}
 
-	size = 1;
-	while(size < n) {
-		   lower1 = 0;
-		   k = 0;
-		   while(lower1 + size < n) {
-			  upper1 = lower1 + size - 1;
-			  lower2 = upper1 + 1;
-			  upper2 = (lower2 + size - 1 < n) ? lower2 + size-1 : n-1;
-			  for(i = lower1, j = lower2; i <= upper1 && j <= upper2; k++)
-				 if(vectorToSort[i] < vectorToSort[j])
+		size = 1;
+		while(size < n) {
+			lower1 = 0;
+			k = 0;
+			while(lower1 + size < n) {
+				upper1 = lower1 + size - 1;
+				lower2 = upper1 + 1;
+				upper2 = (lower2 + size - 1 < n) ? lower2 + size-1 : n-1;
+				for(i = lower1, j = lower2; i <= upper1 && j <= upper2; k++)
+					if(vectorToSort[i] < vectorToSort[j])
+						help[k] = vectorToSort[i++];
+					else
+						help[k] = vectorToSort[j++];
+
+				for(; i <= upper1; k++)
 					help[k] = vectorToSort[i++];
-				 else
+				for(; j <= upper2; k++)
 					help[k] = vectorToSort[j++];
 
-			  for(; i <= upper1; k++)
-				 help[k] = vectorToSort[i++];
-			  for(; j <= upper2; k++)
-				 help[k] = vectorToSort[j++];
+				lower1 = upper2 + 1;
+			} // endwhile
 
-			  lower1 = upper2 + 1;
-		   } // endwhile
+			for(i=lower1; k<n; i++)
+				help[k++] = vectorToSort[i];
+			for(i=0; i<n; i++)
+				vectorToSort[i] = help[i];
 
-		   for(i=lower1; k<n; i++)
-			  help[k++] = vectorToSort[i];
-		   for(i=0; i<n; i++)
-			  vectorToSort[i] = help[i];
-
-		   size = size*2;
-	   } //endwhile
+			size = size*2;
+		} //endwhile
 	}
 
 	template<class T>
 	void insertionSort(std::vector<T> vectorToSort);
 
 	template<class T>
-	void selectionSort(std::vector<T> vectorToSort);
+	void swap(int *xp, int *yp) {
+		int temp = *xp;
+		*xp = *yp;
+		*yp = temp;
+	}
+
+	template<class T>
+	void selectionSort(std::vector<T> vectorToSort) {
+
+		int n = vectorToSort.size();
+		int i, j, min_idx;
+
+		// One by one move boundary of unsorted subarray
+		for (i = 0; i < n-1; i++)
+		{
+			// Find the minimum element in unsorted array
+			min_idx = i;
+			for (j = i+1; j < n; j++)
+				if (vectorToSort[j] < vectorToSort[min_idx])
+					min_idx = j;
+
+			// Swap the found minimum element with the first element
+			swap<T>(&vectorToSort[min_idx], &vectorToSort[i]);
+
+		}
+
+
+
+	}
 
 	template<class T>
 	void quickSort(std::vector<T> vectorToSort);
@@ -99,13 +127,15 @@ namespace Sort {
 				case MERGE_SORT :
 					mergeSort<T>(vectors->m_vectorSet[j]);
 					break;
-					//					case insertionSort : insertion<T>(tempVector[j]);
-					//					case selectionSort : selection<T>(tempVector[j]);
-					//					case quickSort : quick<T>(tempVector[j]);
-					//					case binarySearchTreeSort : binarySearchTree<T>(tempVector[j]);
+//				case INSERTION_SORT : insertionSort<T>(vectors->m_vectorSet[j]);
+				case SELECTION_SORT : selectionSort<T>(vectors->m_vectorSet[j]);
+//				case QUICK_SORT : quickSort<T>(vectors->m_vectorSet[j]);
+//				case BINARY_SEARCH_TREE_SORT : binarySearchTreeSort<T>(vectors->m_vectorSet[j]);
 				case HEAP_SORT : heapSort<T>(vectors->m_vectorSet[j]);
 				case STD_SORT :
 					stdSort<T>(vectors->m_vectorSet[j]);
+					break;
+				case END :
 					break;
 			}
 		}
