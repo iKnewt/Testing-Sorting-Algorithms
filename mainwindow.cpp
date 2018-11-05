@@ -53,29 +53,49 @@ void MainWindow::test()
 
 	qDebug() << "test";
 
-//	if(ui->checkBox_heapSort->isChecked()) {
-//		ui->label_progression_heapSort->setText("Sorting...");
-//		ui->label_progression_heapSort->repaint();
-//		qDebug() << "heapSort checked";
-//		ui->label_timeToComplete_heapSort->setText(QString::number(Sort::testTime<int>(vectorSize, vectorAmount, HEAP_SORT)));
-//		ui->label_progression_heapSort->setText("Finished.");
-//	}
-//	else {
-//		ui->label_progression_heapSort->setText("");
-//		ui->label_timeToComplete_heapSort->setText("");
-//	}
 
-//	if(ui->checkBox_stdSort->isChecked()) {
-//		ui->label_progression_stdSort->setText("Sorting...");
-//		qApp->processEvents();
-//		qDebug() << "stdSort checked";
-//		ui->label_timeToComplete_stdSort->setText(QString::number(Sort::testTime<int>(vectorSize, vectorAmount, STD_SORT)));
-//		ui->label_progression_stdSort->setText("Finished.");
-//	}
-//	else {
-//		ui->label_progression_stdSort->setText("");
-//		ui->label_timeToComplete_stdSort->setText("");
-//	}
+
+	if(ui->checkBox_mergeSort->isChecked()) {
+		ui->label_progression_mergeSort->setText("Sorting...");
+		ui->label_progression_mergeSort->repaint();
+		qDebug() << "heapSort checked";
+		ui->label_secondsToComplete_mergeSort->setText(QString::number(Sort::testTime<int>(vectorSize, vectorAmount, MERGE_SORT)));
+		ui->label_progression_mergeSort->setText("Finished.");
+	}
+	else {
+		ui->label_progression_mergeSort->setText("");
+		ui->label_secondsToComplete_mergeSort->setText("");
+	}
+
+
+
+
+	if(ui->checkBox_heapSort->isChecked()) {
+		ui->label_progression_heapSort->setText("Sorting...");
+		ui->label_progression_heapSort->repaint();
+		qDebug() << "heapSort checked";
+		ui->label_timeToComplete_heapSort->setText(QString::number(Sort::testTime<int>(vectorSize, vectorAmount, HEAP_SORT)));
+		ui->label_progression_heapSort->setText("Finished.");
+	}
+	else {
+		ui->label_progression_heapSort->setText("");
+		ui->label_timeToComplete_heapSort->setText("");
+	}
+
+
+
+
+	if(ui->checkBox_stdSort->isChecked()) {
+		ui->label_progression_stdSort->setText("Sorting...");
+		qApp->processEvents();
+		qDebug() << "stdSort checked";
+		ui->label_timeToComplete_stdSort->setText(QString::number(Sort::testTime<int>(vectorSize, vectorAmount, STD_SORT)));
+		ui->label_progression_stdSort->setText("Finished.");
+	}
+	else {
+		ui->label_progression_stdSort->setText("");
+		ui->label_timeToComplete_stdSort->setText("");
+	}
 }
 
 void MainWindow::runSort(int vectorSize, int vectorAmount, sortUI sortFuntion) {

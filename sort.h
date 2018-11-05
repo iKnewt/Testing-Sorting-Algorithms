@@ -23,75 +23,47 @@ enum sortFunctions {
 namespace Sort {
 
 	template<class T>
-	void merge(std::vector<T> vectorToSort, int leftIndex, int middleIndex, int rightIndex) {
-
-		int	i, j, k;
-		int n1 = middleIndex - leftIndex + 1;
-		int n2 = rightIndex - middleIndex;
-
-		/* create temp arrays */
-		std::vector<T> tempVecOne;
-		std::vector<T> tempVecTwo;
-
-		/* Copy data to temp arrays L[] and R[] */
-		for(i = 0; i < n1; i++)
-			tempVecOne.push_back(vectorToSort[leftIndex + i]);
-		for(j = 0; j < n2; j++)
-			tempVecTwo.push_back(vectorToSort[middleIndex + 1 + j]);
-
-		/* Merge the temp arrays back into arr[l..r]*/
-		i = 0; // Initial index of first subarray
-		j = 0; // Initial index of second subarray
-		k = leftIndex; // Initial index of merged subarray
-		while (i < n1 && j < n2) {
-			if(tempVecOne[i] <= tempVecTwo[j]) {
-				vectorToSort[k] = tempVecOne[i];
-				i++;
-			}
-			else {
-				vectorToSort[k] = tempVecTwo[j];
-				j++;
-			}
-			k++;
-		}
-
-		/* Copy the remaining elements of L[], if there
-		   are any */
-		while(i < n1) {
-			vectorToSort[k] = tempVecOne[i];
-			i++;
-			k++;
-		}
-
-		/* Copy the remaining elements of R[], if there
-		   are any */
-		while(j < n2) {
-			vectorToSort[k] = tempVecTwo[j];
-			j++;
-			k++;
-		}
-	}
-
-	template<class T>
-	void mergeSort(std::vector<T> vectorToSort, int leftIndex, int rightIndex) {
-		if(leftIndex < rightIndex) {
-			// Same as (l+r)/2, but avoids overflow for
-			// large l and h
-			int middleIndex = leftIndex + ( rightIndex - leftIndex) / 2;
-
-			// Sort first and second halves
-			mergeSort(vectorToSort, leftIndex, middleIndex);
-			mergeSort(vectorToSort, middleIndex + 1, rightIndex);
-
-			merge(vectorToSort, leftIndex, middleIndex, rightIndex);
-		}
-	}
-
-	template<class T>
 	void mergeSort(std::vector<T> vectorToSort) {
 
-		int rightIndex = vectorToSort.size() - 1;
-		mergeSort(vectorToSort, 0, rightIndex);
+	int i, j, k, lower1, lower2, size, upper1, upper2;
+
+	int n = vectorToSort.size();
+
+	std::vector<T> help;
+
+	for(unsigned int x = 0; x < vectorToSort.size(); x++) {
+		help.push_back(0);
+	}
+
+	size = 1;
+	while(size < n) {
+		   lower1 = 0;
+		   k = 0;
+		   while(lower1 + size < n) {
+			  upper1 = lower1 + size - 1;
+			  lower2 = upper1 + 1;
+			  upper2 = (lower2 + size - 1 < n) ? lower2 + size-1 : n-1;
+			  for(i = lower1, j = lower2; i <= upper1 && j <= upper2; k++)
+				 if(vectorToSort[i] < vectorToSort[j])
+					help[k] = vectorToSort[i++];
+				 else
+					help[k] = vectorToSort[j++];
+
+			  for(; i <= upper1; k++)
+				 help[k] = vectorToSort[i++];
+			  for(; j <= upper2; k++)
+				 help[k] = vectorToSort[j++];
+
+			  lower1 = upper2 + 1;
+		   } // endwhile
+
+		   for(i=lower1; k<n; i++)
+			  help[k++] = vectorToSort[i];
+		   for(i=0; i<n; i++)
+			  vectorToSort[i] = help[i];
+
+		   size = size*2;
+	   } //endwhile
 	}
 
 	template<class T>

@@ -32,8 +32,7 @@ SOURCES += \
 HEADERS += \
         mainwindow.h \
     randomvectorset.h \
-    sort.h \
-    mergesort.h
+    sort.h
 
 FORMS += \
         mainwindow.ui
