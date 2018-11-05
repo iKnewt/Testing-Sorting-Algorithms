@@ -88,10 +88,10 @@ namespace Sort {
 	}
 
 	template<class T>
-	void swap(int *xp, int *yp) {
-		int temp = *xp;
-		*xp = *yp;
-		*yp = temp;
+	void swap(T* a, T* b) {
+		T temp = *a;
+		*a = *b;
+		*b = temp;
 	}
 
 	template<class T>
@@ -114,7 +114,42 @@ namespace Sort {
 	}
 
 	template<class T>
-	void quickSort(std::vector<T> vectorToSort);
+	int partition (std::vector<T> vectorToSort, int low, int high)
+	{
+		int pivot = vectorToSort[high];    // pivot
+		int i = (low - 1);  // Index of smaller element
+
+		for (int j = low; j <= high- 1; j++)
+		{
+			// If current element is smaller than or
+			// equal to pivot
+			if (vectorToSort[j] <= pivot)
+			{
+				i++;    // increment index of smaller element
+				swap(&vectorToSort[i], &vectorToSort[j]);
+			}
+		}
+		swap(&vectorToSort[i + 1], &vectorToSort[high]);
+		return (i + 1);
+	}
+
+	template<class T>
+	void quickSort(std::vector<T> vectorToSort) {
+
+		int high = vectorToSort.size() - 1;
+		int low = 0;
+
+		if(low < high) {
+			/* pi is partitioning index, arr[p] is now
+				   at right place */
+			int pi = partition(vectorToSort, low, high);
+
+			// Separately sort elements before
+			// partition and after partition
+			quickSort(vectorToSort, low, pi - 1);
+			quickSort(vectorToSort, pi + 1, high);
+		}
+	}
 
 	template<class T>
 	void binarySearchTreeSort(std::vector<T> vectorToSort) {

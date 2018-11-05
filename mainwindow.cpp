@@ -96,6 +96,20 @@ void MainWindow::test()
 	}
 
 
+	// QUICK SORT
+	if(ui->checkBox_quickSort->isChecked()) {
+		ui->label_progression_quickSort->setText("Sorting...");
+		ui->label_progression_quickSort->repaint();
+		qDebug() << "heapSort checked";
+		ui->label_secondsToComplete_quickSort->setText(QString::number(Sort::testTime<int>(vectorSize, vectorAmount, SELECTION_SORT)));
+		ui->label_progression_quickSort->setText("Finished.");
+	}
+	else {
+		ui->label_progression_selectionSort->setText("");
+		ui->label_secondsToComplete_selectionSort->setText("");
+	}
+
+
 	// BINARY SEARCH TREE
 	if(ui->checkBox_binarySearchTreeSort->isChecked()) {
 		ui->label_progression_binarySearchTreeSort->setText("Sorting...");
