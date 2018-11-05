@@ -25,14 +25,13 @@ public:
 
 public slots:
 	void test();
-	void runSort(int vectorSize, int vectorAmount, sortUI sortFuntion);
+	void runSort(int vectorSize, int vectorAmount, sortUI sortFunction, sortFunctions name);
 
 signals:
 
 private:
 	Ui::MainWindow* ui;
-
-	sortUI sortUIinfo[6];
+	sortUI sortUIinfo[7];
 };
 
 #endif // MAINWINDOW_H

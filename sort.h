@@ -109,22 +109,19 @@ namespace Sort {
 					minIndex = j;
 
 			// Swap the found minimum element with the first element
-			swap<T>(&vectorToSort[minIndex], &vectorToSort[i]);
+			swap(&vectorToSort[minIndex], &vectorToSort[i]);
 		}
 	}
 
 	template<class T>
-	int partition (std::vector<T> vectorToSort, int low, int high)
-	{
+	int partition (std::vector<T> vectorToSort, int low, int high) {
 		int pivot = vectorToSort[high];    // pivot
 		int i = (low - 1);  // Index of smaller element
 
-		for (int j = low; j <= high- 1; j++)
-		{
+		for(int j = low; j <= high - 1; j++) {
 			// If current element is smaller than or
 			// equal to pivot
-			if (vectorToSort[j] <= pivot)
-			{
+			if(vectorToSort[j] <= pivot) {
 				i++;    // increment index of smaller element
 				swap(&vectorToSort[i], &vectorToSort[j]);
 			}
@@ -134,11 +131,7 @@ namespace Sort {
 	}
 
 	template<class T>
-	void quickSort(std::vector<T> vectorToSort) {
-
-		int high = vectorToSort.size() - 1;
-		int low = 0;
-
+	void quickSort(std::vector<T> vectorToSort, int low, int high) {
 		if(low < high) {
 			/* pi is partitioning index, arr[p] is now
 				   at right place */
@@ -149,6 +142,15 @@ namespace Sort {
 			quickSort(vectorToSort, low, pi - 1);
 			quickSort(vectorToSort, pi + 1, high);
 		}
+	}
+
+	template<class T>
+	void quickSort(std::vector<T> vectorToSort) {
+
+		int low = 0;
+		int high = vectorToSort.size() - 1;
+
+		quickSort(vectorToSort, low, high);
 	}
 
 	template<class T>
@@ -182,11 +184,21 @@ namespace Sort {
 				case MERGE_SORT :
 					mergeSort<T>(vectors->m_vectorSet[j]);
 					break;
-				case INSERTION_SORT : insertionSort<T>(vectors->m_vectorSet[j]);
-				case SELECTION_SORT : selectionSort<T>(vectors->m_vectorSet[j]);
-					//				case QUICK_SORT : quickSort<T>(vectors->m_vectorSet[j]);
-				case BINARY_SEARCH_TREE_SORT : binarySearchTreeSort<T>(vectors->m_vectorSet[j]);
-				case HEAP_SORT : heapSort<T>(vectors->m_vectorSet[j]);
+				case INSERTION_SORT :
+					insertionSort<T>(vectors->m_vectorSet[j]);
+					break;
+				case SELECTION_SORT :
+					selectionSort<T>(vectors->m_vectorSet[j]);
+					break;
+				case QUICK_SORT :
+					quickSort<T>(vectors->m_vectorSet[j]);
+					break;
+				case BINARY_SEARCH_TREE_SORT :
+					binarySearchTreeSort<T>(vectors->m_vectorSet[j]);
+					break;
+				case HEAP_SORT :
+					heapSort<T>(vectors->m_vectorSet[j]);
+					break;
 				case STD_SORT :
 					stdSort<T>(vectors->m_vectorSet[j]);
 					break;

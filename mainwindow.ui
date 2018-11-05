@@ -371,7 +371,7 @@
         </widget>
        </item>
        <item>
-        <widget class="QLabel" name="label_timeToComplete_heapSort">
+        <widget class="QLabel" name="label_secondsToComplete_heapSort">
          <property name="text">
           <string>1</string>
          </property>
@@ -406,7 +406,7 @@
         </widget>
        </item>
        <item>
-        <widget class="QLabel" name="label_timeToComplete_stdSort">
+        <widget class="QLabel" name="label_secondsToComplete_stdSort">
          <property name="text">
           <string>1</string>
          </property>
