@@ -68,7 +68,24 @@ namespace Sort {
 	}
 
 	template<class T>
-	void insertionSort(std::vector<T> vectorToSort);
+	void insertionSort(std::vector<T> vectorToSort) {
+
+		int n = vectorToSort.size();
+		int i, key, j;
+		for(i = 1; i < n; i++) {
+			key = vectorToSort[i];
+			j = i - 1;
+
+			/* Move elements of arr[0..i-1], that are
+				  greater than key, to one position ahead
+				  of their current position */
+			while(j >= 0 && vectorToSort[j] > key) {
+				vectorToSort[j + 1] = vectorToSort[j];
+				j = j - 1;
+			}
+			vectorToSort[j + 1] = key;
+		}
+	}
 
 	template<class T>
 	void swap(int *xp, int *yp) {
@@ -130,7 +147,7 @@ namespace Sort {
 				case MERGE_SORT :
 					mergeSort<T>(vectors->m_vectorSet[j]);
 					break;
-					//				case INSERTION_SORT : insertionSort<T>(vectors->m_vectorSet[j]);
+				case INSERTION_SORT : insertionSort<T>(vectors->m_vectorSet[j]);
 				case SELECTION_SORT : selectionSort<T>(vectors->m_vectorSet[j]);
 					//				case QUICK_SORT : quickSort<T>(vectors->m_vectorSet[j]);
 				case BINARY_SEARCH_TREE_SORT : binarySearchTreeSort<T>(vectors->m_vectorSet[j]);

@@ -54,7 +54,7 @@ void MainWindow::test()
 	qDebug() << "test";
 
 
-
+	// MERGE SORT
 	if(ui->checkBox_mergeSort->isChecked()) {
 		ui->label_progression_mergeSort->setText("Sorting...");
 		ui->label_progression_mergeSort->repaint();
@@ -68,9 +68,21 @@ void MainWindow::test()
 	}
 
 
+	// INSERTION SORT
+	if(ui->checkBox_insertionSort->isChecked()) {
+		ui->label_progression_insertionSort->setText("Sorting...");
+		ui->label_progression_insertionSort->repaint();
+		qDebug() << "heapSort checked";
+		ui->label_secondsToComplete_insertionSort->setText(QString::number(Sort::testTime<int>(vectorSize, vectorAmount, INSERTION_SORT)));
+		ui->label_progression_insertionSort->setText("Finished.");
+	}
+	else {
+		ui->label_progression_insertionSort->setText("");
+		ui->label_secondsToComplete_insertionSort->setText("");
+	}
 
 
-// SELECTION SORT
+	// SELECTION SORT
 	if(ui->checkBox_selectionSort->isChecked()) {
 		ui->label_progression_selectionSort->setText("Sorting...");
 		ui->label_progression_selectionSort->repaint();
@@ -80,12 +92,11 @@ void MainWindow::test()
 	}
 	else {
 		ui->label_progression_selectionSort->setText("");
-		ui->label_secondsToComplete_mergeSort->setText("");
+		ui->label_secondsToComplete_selectionSort->setText("");
 	}
 
 
-
-// BINARY SEARCH TREE
+	// BINARY SEARCH TREE
 	if(ui->checkBox_binarySearchTreeSort->isChecked()) {
 		ui->label_progression_binarySearchTreeSort->setText("Sorting...");
 		ui->label_progression_binarySearchTreeSort->repaint();
@@ -99,11 +110,7 @@ void MainWindow::test()
 	}
 
 
-
-
-
-
-// HEAP SORT
+	// HEAP SORT
 	if(ui->checkBox_heapSort->isChecked()) {
 		ui->label_progression_heapSort->setText("Sorting...");
 		ui->label_progression_heapSort->repaint();
@@ -117,8 +124,7 @@ void MainWindow::test()
 	}
 
 
-
-// STD SORT
+	// STD SORT
 	if(ui->checkBox_stdSort->isChecked()) {
 		ui->label_progression_stdSort->setText("Sorting...");
 		qApp->processEvents();
