@@ -58,17 +58,21 @@ void MainWindow::test()
 	int vectorSize = ui->spinBox_vectorSizeInput->value();
 	int vectorAmount = ui->spinBox_vectorAmountInput->value();
 
+	auto vectors = new RandomVectorSet<int>(vectorSize, vectorAmount);
+
 	for (int i = 0; i < END; i++) {
-		runSort(vectorSize, vectorAmount, sortUIinfo[i], static_cast<sortFunctions>(i));
+		runSort(vectors, sortUIinfo[i], static_cast<sortFunctions>(i));
 	}
+
+	delete vectors;
 }
 
-void MainWindow::runSort(int vectorSize, int vectorAmount, sortUI sortFunction, sortFunctions name) {
+void MainWindow::runSort(RandomVectorSet<int>* vectors, sortUI sortFunction, sortFunctions name) {
 
 	if(sortFunction.checkBox->isChecked()) {
 		sortFunction.progression->setText("Sorting...");
 		qApp->processEvents();
-		QString secondsToComplete = QString::number(Sort::testTime<int>(vectorSize, vectorAmount, name));
+		QString secondsToComplete = QString::number(Sort::testTime<int>(vectors, name));
 		sortFunction.timeToComplete->setText(secondsToComplete);
 		sortFunction.progression->setText("Finished.");
 	}

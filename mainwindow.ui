@@ -181,7 +181,7 @@
        <item>
         <widget class="QCheckBox" name="checkBox_mergeSort">
          <property name="text">
-          <string>mergeSort</string>
+          <string>Merge Sort</string>
          </property>
          <property name="checked">
           <bool>true</bool>
@@ -191,14 +191,14 @@
        <item>
         <widget class="QLabel" name="label_progression_mergeSort">
          <property name="text">
-          <string>1</string>
+          <string/>
          </property>
         </widget>
        </item>
        <item>
         <widget class="QLabel" name="label_secondsToComplete_mergeSort">
          <property name="text">
-          <string>1</string>
+          <string/>
          </property>
         </widget>
        </item>
@@ -216,7 +216,7 @@
        <item>
         <widget class="QCheckBox" name="checkBox_insertionSort">
          <property name="text">
-          <string>insertionSort</string>
+          <string>Insertion Sort</string>
          </property>
          <property name="checked">
           <bool>true</bool>
@@ -226,14 +226,14 @@
        <item>
         <widget class="QLabel" name="label_progression_insertionSort">
          <property name="text">
-          <string>1</string>
+          <string/>
          </property>
         </widget>
        </item>
        <item>
         <widget class="QLabel" name="label_secondsToComplete_insertionSort">
          <property name="text">
-          <string>1</string>
+          <string/>
          </property>
         </widget>
        </item>
@@ -251,7 +251,7 @@
        <item>
         <widget class="QCheckBox" name="checkBox_selectionSort">
          <property name="text">
-          <string>selectionSort</string>
+          <string>Selection Sort</string>
          </property>
          <property name="checked">
           <bool>true</bool>
@@ -261,14 +261,14 @@
        <item>
         <widget class="QLabel" name="label_progression_selectionSort">
          <property name="text">
-          <string>1</string>
+          <string/>
          </property>
         </widget>
        </item>
        <item>
         <widget class="QLabel" name="label_secondsToComplete_selectionSort">
          <property name="text">
-          <string>1</string>
+          <string/>
          </property>
         </widget>
        </item>
@@ -286,7 +286,7 @@
        <item>
         <widget class="QCheckBox" name="checkBox_quickSort">
          <property name="text">
-          <string>quickSort</string>
+          <string>Quick Sort</string>
          </property>
          <property name="checked">
           <bool>true</bool>
@@ -296,14 +296,14 @@
        <item>
         <widget class="QLabel" name="label_progression_quickSort">
          <property name="text">
-          <string>1</string>
+          <string/>
          </property>
         </widget>
        </item>
        <item>
         <widget class="QLabel" name="label_secondsToComplete_quickSort">
          <property name="text">
-          <string>1</string>
+          <string/>
          </property>
         </widget>
        </item>
@@ -321,7 +321,7 @@
        <item>
         <widget class="QCheckBox" name="checkBox_binarySearchTreeSort">
          <property name="text">
-          <string>binarySearchTreeSort</string>
+          <string>Binary Search Tree</string>
          </property>
          <property name="checked">
           <bool>true</bool>
@@ -331,14 +331,14 @@
        <item>
         <widget class="QLabel" name="label_progression_binarySearchTreeSort">
          <property name="text">
-          <string>1</string>
+          <string/>
          </property>
         </widget>
        </item>
        <item>
         <widget class="QLabel" name="label_secondsToComplete_binarySearchTreeSort">
          <property name="text">
-          <string>1</string>
+          <string/>
          </property>
         </widget>
        </item>
@@ -356,7 +356,7 @@
        <item>
         <widget class="QCheckBox" name="checkBox_heapSort">
          <property name="text">
-          <string>heapSort</string>
+          <string>Heap Sort</string>
          </property>
          <property name="checked">
           <bool>true</bool>
@@ -366,14 +366,14 @@
        <item>
         <widget class="QLabel" name="label_progression_heapSort">
          <property name="text">
-          <string>1</string>
+          <string/>
          </property>
         </widget>
        </item>
        <item>
         <widget class="QLabel" name="label_secondsToComplete_heapSort">
          <property name="text">
-          <string>1</string>
+          <string/>
          </property>
         </widget>
        </item>
@@ -391,7 +391,7 @@
        <item>
         <widget class="QCheckBox" name="checkBox_stdSort">
          <property name="text">
-          <string>stdSort</string>
+          <string>std::Sort</string>
          </property>
          <property name="checked">
           <bool>true</bool>
@@ -401,14 +401,14 @@
        <item>
         <widget class="QLabel" name="label_progression_stdSort">
          <property name="text">
-          <string>1</string>
+          <string/>
          </property>
         </widget>
        </item>
        <item>
         <widget class="QLabel" name="label_secondsToComplete_stdSort">
          <property name="text">
-          <string>1</string>
+          <string/>
          </property>
         </widget>
        </item>

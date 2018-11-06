@@ -25,7 +25,7 @@ public:
 
 public slots:
 	void test();
-	void runSort(int vectorSize, int vectorAmount, sortUI sortFunction, sortFunctions name);
+	void runSort(RandomVectorSet<int>* vectors, sortUI sortFunction, sortFunctions name);
 
 signals:
 

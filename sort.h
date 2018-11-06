@@ -24,7 +24,17 @@ enum sortFunctions {
 namespace Sort {
 
 	template<class T>
+	void print(std::vector<T> vectorToPrint) {
+		std::cout << "\n";
+		for(unsigned int i = 0; i < vectorToPrint.size(); i++) {
+			std::cout << vectorToPrint[i] << "-";
+		}
+	}
+
+	template<class T>
 	void mergeSort(std::vector<T> vectorToSort) {
+		std::cout << "Merge Sort:";
+		print(vectorToSort);
 
 		int i, j, k, lower1, lower2, size, upper1, upper2;
 
@@ -65,10 +75,13 @@ namespace Sort {
 
 			size = size*2;
 		} //endwhile
+		print(vectorToSort);
 	}
 
 	template<class T>
 	void insertionSort(std::vector<T> vectorToSort) {
+		std::cout << "Insertion Sort:";
+		print(vectorToSort);
 
 		int n = vectorToSort.size();
 		int i, key, j;
@@ -85,6 +98,7 @@ namespace Sort {
 			}
 			vectorToSort[j + 1] = key;
 		}
+		print(vectorToSort);
 	}
 
 	template<class T>
@@ -96,6 +110,8 @@ namespace Sort {
 
 	template<class T>
 	void selectionSort(std::vector<T> vectorToSort) {
+		std::cout << "Selection Sort:";
+		print(vectorToSort);
 
 		int n = vectorToSort.size();
 		int i, j, minIndex;
@@ -111,6 +127,7 @@ namespace Sort {
 			// Swap the found minimum element with the first element
 			swap(&vectorToSort[minIndex], &vectorToSort[i]);
 		}
+		print(vectorToSort);
 	}
 
 	template<class T>
@@ -146,37 +163,50 @@ namespace Sort {
 
 	template<class T>
 	void quickSort(std::vector<T> vectorToSort) {
+		std::cout << "Quick Sort:";
+		print(vectorToSort);
 
 		int low = 0;
 		int high = vectorToSort.size() - 1;
 
 		quickSort(vectorToSort, low, high);
+		print(vectorToSort);
 	}
 
 	template<class T>
 	void binarySearchTreeSort(std::vector<T> vectorToSort) {
-
+		std::cout << "Binary Search Tree:";
+		print(vectorToSort);
 		BinarySearchTree<T>* binarySearchTree = new BinarySearchTree<T>;
 
 		for(unsigned int i = 0; i < vectorToSort.size(); i++) {
 			binarySearchTree->insert(vectorToSort[i]);
 		}
+		std::cout << "\n";
+		binarySearchTree->inorderTraverse();
 	}
 
 	template<class T>
 	void heapSort(std::vector<T> vectorToSort) {
+		std::cout << "Heap Sort:";
+		print(vectorToSort);
 		std::sort_heap(vectorToSort.begin(), vectorToSort.end());
+		print(vectorToSort);
 	}
 
 	template<class T>
 	void stdSort(std::vector<T> vectorToSort) {
+		std::cout << "std Sort:";
+		print(vectorToSort);
 		std::sort(vectorToSort.begin(), vectorToSort.end());
+		print(vectorToSort);
 	}
 
 	template<class T>
-	double testTime(int vectorSize, int vectorAmount, sortFunctions sortFunctionToTest) {
+	double testTime(RandomVectorSet<T>* vectors, sortFunctions sortFunctionToTest) {
 
-		auto vectors = new RandomVectorSet<int>(vectorSize, vectorAmount);
+		std::cout << "\n\nStarting sorting - " << sortFunctionToTest << std::endl;
+//		auto vectors = new RandomVectorSet<int>(vectorSize, vectorAmount);
 		auto start = std::chrono::high_resolution_clock::now();
 
 		for(unsigned int j = 0; j < vectors->m_vectorSet.size(); j++) {
