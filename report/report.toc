@@ -1,10 +1,11 @@
 \contentsline {section}{\numberline {1}Introduction}{3}{section.1}
-\contentsline {section}{\numberline {2}The different Sorting Algorithms}{3}{section.2}
-\contentsline {subsection}{\numberline {2.1}Merge Sort}{3}{subsection.2.1}
-\contentsline {subsection}{\numberline {2.2}Insertion Sort}{4}{subsection.2.2}
-\contentsline {subsection}{\numberline {2.3}Selection Sort}{4}{subsection.2.3}
-\contentsline {subsection}{\numberline {2.4}Quick Sort}{5}{subsection.2.4}
-\contentsline {subsection}{\numberline {2.5}Binary Search Tree}{5}{subsection.2.5}
-\contentsline {subsection}{\numberline {2.6}Heap Sort}{5}{subsection.2.6}
-\contentsline {subsection}{\numberline {2.7}std::Sort}{6}{subsection.2.7}
-\contentsline {section}{\numberline {3}Comparing Algorithms}{6}{section.3}
+\contentsline {subsection}{\numberline {1.1}Why do we need sorting algorythms}{3}{subsection.1.1}
+\contentsline {subsection}{\numberline {1.2}How I test performance}{4}{subsection.1.2}
+\contentsline {section}{\numberline {2}The different Sorting Algorithms}{5}{section.2}
+\contentsline {subsection}{\numberline {2.1}Selection Sort}{5}{subsection.2.1}
+\contentsline {subsection}{\numberline {2.2}Insertion Sort}{5}{subsection.2.2}
+\contentsline {subsection}{\numberline {2.3}Merge Sort}{6}{subsection.2.3}
+\contentsline {subsection}{\numberline {2.4}std::Sort}{7}{subsection.2.4}
+\contentsline {subsection}{\numberline {2.5}Binary Search Tree}{7}{subsection.2.5}
+\contentsline {subsection}{\numberline {2.6}Heap Sort}{8}{subsection.2.6}
+\contentsline {section}{\numberline {3}Conclusion}{9}{section.3}

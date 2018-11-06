@@ -33,8 +33,8 @@ namespace Sort {
 
 	template<class T>
 	void mergeSort(std::vector<T> vectorToSort) {
-		std::cout << "Merge Sort:";
-		print(vectorToSort);
+//		std::cout << "Merge Sort:";
+//		print(vectorToSort);
 
 		int i, j, k, lower1, lower2, size, upper1, upper2;
 
@@ -68,20 +68,20 @@ namespace Sort {
 				lower1 = upper2 + 1;
 			} // endwhile
 
-			for(i=lower1; k<n; i++)
+			for(i = lower1; k<n; i++)
 				help[k++] = vectorToSort[i];
-			for(i=0; i<n; i++)
+			for(i = 0; i < n; i++)
 				vectorToSort[i] = help[i];
 
-			size = size*2;
+			size = size * 2;
 		} //endwhile
-		print(vectorToSort);
+//		print(vectorToSort);
 	}
 
 	template<class T>
 	void insertionSort(std::vector<T> vectorToSort) {
-		std::cout << "Insertion Sort:";
-		print(vectorToSort);
+//		std::cout << "Insertion Sort:";
+//		print(vectorToSort);
 
 		int n = vectorToSort.size();
 		int i, key, j;
@@ -98,7 +98,7 @@ namespace Sort {
 			}
 			vectorToSort[j + 1] = key;
 		}
-		print(vectorToSort);
+//		print(vectorToSort);
 	}
 
 	template<class T>
@@ -110,8 +110,8 @@ namespace Sort {
 
 	template<class T>
 	void selectionSort(std::vector<T> vectorToSort) {
-		std::cout << "Selection Sort:";
-		print(vectorToSort);
+//		std::cout << "Selection Sort:";
+//		print(vectorToSort);
 
 		int n = vectorToSort.size();
 		int i, j, minIndex;
@@ -127,7 +127,7 @@ namespace Sort {
 			// Swap the found minimum element with the first element
 			swap(&vectorToSort[minIndex], &vectorToSort[i]);
 		}
-		print(vectorToSort);
+//		print(vectorToSort);
 	}
 
 	template<class T>
@@ -175,8 +175,8 @@ namespace Sort {
 
 	template<class T>
 	void binarySearchTreeSort(std::vector<T> vectorToSort) {
-		std::cout << "Binary Search Tree:";
-		print(vectorToSort);
+//		std::cout << "Binary Search Tree:";
+//		print(vectorToSort);
 		BinarySearchTree<T>* binarySearchTree = new BinarySearchTree<T>;
 
 		for(unsigned int i = 0; i < vectorToSort.size(); i++) {
@@ -188,18 +188,18 @@ namespace Sort {
 
 	template<class T>
 	void heapSort(std::vector<T> vectorToSort) {
-		std::cout << "Heap Sort:";
-		print(vectorToSort);
+//		std::cout << "Heap Sort:";
+//		print(vectorToSort);
 		std::sort_heap(vectorToSort.begin(), vectorToSort.end());
-		print(vectorToSort);
+//		print(vectorToSort);
 	}
 
 	template<class T>
 	void stdSort(std::vector<T> vectorToSort) {
-		std::cout << "std Sort:";
-		print(vectorToSort);
+//		std::cout << "std Sort:";
+//		print(vectorToSort);
 		std::sort(vectorToSort.begin(), vectorToSort.end());
-		print(vectorToSort);
+//		print(vectorToSort);
 	}
 
 	template<class T>

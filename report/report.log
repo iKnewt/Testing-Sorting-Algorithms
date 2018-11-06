@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.10.22)  6 NOV 2018 01:57
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.10.22)  6 NOV 2018 11:44
 entering extended mode
 **./report.tex
 (report.tex
@@ -217,6 +217,30 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip46
 )
+(D:\Programs\LaTex\tex\latex\caption\subcaption.sty
+Package: subcaption 2018/05/01 v1.1-162 Sub-captions (AR)
+
+(D:\Programs\LaTex\tex\latex\caption\caption.sty
+Package: caption 2018/10/06 v3.3-154 Customizing captions (AR)
+
+(D:\Programs\LaTex\tex\latex\caption\caption3.sty
+Package: caption3 2018/09/12 v1.8c caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 64.
+\captionmargin=\dimen118
+\captionmargin@=\dimen119
+\captionwidth=\dimen120
+\caption@tempdima=\dimen121
+\caption@indent=\dimen122
+\caption@parindent=\dimen123
+\caption@hangindent=\dimen124
+)
+\c@caption@flags=\count110
+\c@ContinuedFloat=\count111
+Package caption Info: hyperref package is loaded.
+)
+\c@subfigure=\count112
+\c@subtable=\count113
+)
 \@indexfile=\write3
 \openout3 = `report.idx'.
 
@@ -241,16 +265,16 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 13.
 LaTeX Font Info:    ... okay on input line 13.
  (D:\Programs\LaTex\tex\context\base\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count110
-\scratchdimen=\dimen118
+\scratchcounter=\count114
+\scratchdimen=\dimen125
 \scratchbox=\box28
-\nofMPsegments=\count111
-\nofMParguments=\count112
+\nofMPsegments=\count115
+\nofMParguments=\count116
 \everyMPshowfont=\toks20
-\MPscratchCnt=\count113
-\MPscratchDim=\dimen119
-\MPnumerator=\count114
-\makeMPintoPDFobject=\count115
+\MPscratchCnt=\count117
+\MPscratchDim=\dimen126
+\MPnumerator=\count118
+\makeMPintoPDFobject=\count119
 \everyMPtoPDFconversion=\toks21
 ) (D:\Programs\LaTex\tex\latex\oberdiek\epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
@@ -274,7 +298,7 @@ Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 (D:\Programs\LaTex\tex\generic\oberdiek\gettitlestring.sty
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count116
+\c@section@level=\count120
 )
 LaTeX Info: Redefining \ref on input line 13.
 LaTeX Info: Redefining \pageref on input line 13.
@@ -284,6 +308,8 @@ LaTeX Info: Redefining \nameref on input line 13.
 \@outlinefile=\write4
 \openout4 = `report.out'.
 
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
  [1
 
 {C:/Users/iKnew/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] (report.toc
@@ -292,42 +318,147 @@ LaTeX Info: Redefining \nameref on input line 13.
 \openout5 = `report.toc'.
 
  [2]
-Underfull \hbox (badness 10000) in paragraph at lines 36--42
+Underfull \hbox (badness 10000) in paragraph at lines 25--26
 
  []
 
-<images/mergeSort.png, id=68, 834.86906pt x 315.42844pt>
-File: images/mergeSort.png Graphic file (type png)
-<use images/mergeSort.png>
-Package pdftex.def Info: images/mergeSort.png  used on input line 57.
-(pdftex.def)             Requested size: 241.49895pt x 91.24088pt.
-[3 <./images/mergeSort.png>] [4] [5]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 245.
- [6]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 245.
+
+Underfull \hbox (badness 10000) in paragraph at lines 31--35
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 31--35
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 36--41
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 36--41
+
+ []
+
+[3]
+<images/UI.png, id=80, 338.76563pt x 319.1925pt>
+File: images/UI.png Graphic file (type png)
+<use images/UI.png>
+Package pdftex.def Info: images/UI.png  used on input line 51.
+(pdftex.def)             Requested size: 241.49895pt x 227.55363pt.
+ [4 <./images/UI.png>]
+<"images/Selection Sort".png, id=89, 985.43156pt x 351.56343pt>
+File: "images/Selection Sort".png Graphic file (type png)
+<use "images/Selection Sort".png>
+Package pdftex.def Info: "images/Selection Sort".png  used on input line 81.
+(pdftex.def)             Requested size: 345.0pt x 123.08122pt.
+ [5 <./images/Selection Sort.png>]
+<"images/Insertion Sort".png, id=96, 985.43156pt x 351.56343pt>
+File: "images/Insertion Sort".png Graphic file (type png)
+<use "images/Insertion Sort".png>
+Package pdftex.def Info: "images/Insertion Sort".png  used on input line 102.
+(pdftex.def)             Requested size: 345.0pt x 123.08122pt.
+<"images/Merge Sort".png, id=97, 985.43156pt x 351.56343pt>
+File: "images/Merge Sort".png Graphic file (type png)
+<use "images/Merge Sort".png>
+Package pdftex.def Info: "images/Merge Sort".png  used on input line 121.
+(pdftex.def)             Requested size: 345.0pt x 123.08122pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[6 <./images/Insertion Sort.png>]
+<"images/std Sort".png, id=104, 985.43156pt x 351.56343pt>
+File: "images/std Sort".png Graphic file (type png)
+<use "images/std Sort".png>
+Package pdftex.def Info: "images/std Sort".png  used on input line 140.
+(pdftex.def)             Requested size: 345.0pt x 123.08122pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 150--158
+
+ []
+
+[7 <./images/Merge Sort.png> <./images/std Sort.png>]
+<"images/Binary Search Tree".png, id=114, 985.43156pt x 351.56343pt>
+File: "images/Binary Search Tree".png Graphic file (type png)
+<use "images/Binary Search Tree".png>
+Package pdftex.def Info: "images/Binary Search Tree".png  used on input line 16
+1.
+(pdftex.def)             Requested size: 345.0pt x 123.08122pt.
+<"images/Heap Sort".png, id=115, 985.43156pt x 350.05782pt>
+File: "images/Heap Sort".png Graphic file (type png)
+<use "images/Heap Sort".png>
+Package pdftex.def Info: "images/Heap Sort".png  used on input line 181.
+(pdftex.def)             Requested size: 345.0pt x 122.55411pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[8 <./images/Binary Search Tree.png>]
+
+Package caption Warning: \label without proper reference on input line 195.
+See the caption package documentation for explanation.
+
+
+LaTeX Warning: Reference `fig:dataset' on page 9 undefined on input line 189.
+
+
+Package caption Warning: \label without proper reference on input line 195.
+See the caption package documentation for explanation.
+
+
+LaTeX Warning: Reference `fig:dataset' on page 9 undefined on input line 189.
+
+<"images/small dataset".png, id=125, 338.76563pt x 319.1925pt>
+File: "images/small dataset".png Graphic file (type png)
+<use "images/small dataset".png>
+Package pdftex.def Info: "images/small dataset".png  used on input line 192.
+(pdftex.def)             Requested size: 172.5pt x 162.53761pt.
+<"images/large dataset".png, id=126, 338.76563pt x 319.1925pt>
+File: "images/large dataset".png Graphic file (type png)
+<use "images/large dataset".png>
+Package pdftex.def Info: "images/large dataset".png  used on input line 193.
+(pdftex.def)             Requested size: 172.5pt x 162.53761pt.
+<"images/several vectors".png, id=127, 338.76563pt x 319.1925pt>
+File: "images/several vectors".png Graphic file (type png)
+<use "images/several vectors".png>
+Package pdftex.def Info: "images/several vectors".png  used on input line 201.
+(pdftex.def)             Requested size: 241.49895pt x 227.55363pt.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 209.
+[9 <./images/Heap Sort.png> <./images/small dataset.png> <./images/large datase
+t.png>] [10 <./images/several vectors.png>]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 209.
  (report.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 245.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 245.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 209.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 209.
 Package rerunfilecheck Info: File `report.out' has not changed.
-(rerunfilecheck)             Checksum: D0EBAFB7626376B572385C758CEDDE42;607.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 245.
+(rerunfilecheck)             Checksum: 184F44A6240A57D712C7DEC46BCDCA4C;693.
+
+
+LaTeX Warning: There were undefined references.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 209.
  ) 
 Here is how much of TeX's memory you used:
- 5628 strings out of 492970
- 80828 string characters out of 3140294
- 174741 words of memory out of 3000000
- 9444 multiletter control sequences out of 15000+200000
+ 6823 strings out of 492970
+ 102705 string characters out of 3140294
+ 196853 words of memory out of 3000000
+ 10608 multiletter control sequences out of 15000+200000
  9023 words of font info for 33 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 28i,6n,28p,643b,324s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 42i,8n,40p,812b,373s stack positions out of 5000i,500n,10000p,200000b,50000s
 <D:/Programs/LaTex/fonts/type1/public/amsfonts/cm/cmbx10.pfb><D:/Programs/LaT
 ex/fonts/type1/public/amsfonts/cm/cmbx12.pfb><D:/Programs/LaTex/fonts/type1/pub
 lic/amsfonts/cm/cmmi10.pfb><D:/Programs/LaTex/fonts/type1/public/amsfonts/cm/cm
 r10.pfb><D:/Programs/LaTex/fonts/type1/public/amsfonts/cm/cmr12.pfb><D:/Program
-s/LaTex/fonts/type1/public/amsfonts/cm/cmr17.pfb>
-Output written on report.pdf (6 pages, 127363 bytes).
+s/LaTex/fonts/type1/public/amsfonts/cm/cmr17.pfb><D:/Programs/LaTex/fonts/type1
+/public/amsfonts/cm/cmr7.pfb><D:/Programs/LaTex/fonts/type1/public/amsfonts/cm/
+cmsy10.pfb>
+Output written on report.pdf (10 pages, 397243 bytes).
 PDF statistics:
- 115 PDF objects out of 1000 (max. 8388607)
- 19 named destinations out of 1000 (max. 500000)
- 86 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 178 PDF objects out of 1000 (max. 8388607)
+ 32 named destinations out of 1000 (max. 500000)
+ 139 words of extra memory for PDF output out of 10000 (max. 10000000)
 
